@@ -15,7 +15,7 @@ yet; I may open them once the circuits are proven.
 
 - **Star** this repository and **watch** it (Custom → Discussions) to hear about the first boards and, later, a first
   production round.
-- **[The progress board](https://github.com/somebox/synthunits/projects)** shows each module's state, from design through bring-up to production.
+- **[The progress board](https://github.com/users/somebox/projects/3)** shows each module's state, from design through bring-up to production.
 - On Mastodon: [@somebox@swiss.social](https://swiss.social/@somebox).
 
 ## Tell me what you think
