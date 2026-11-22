@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: A question or an idea
+    url: https://github.com/somebox/synthunits/discussions
+    about: Ask in the discussions, or share what you'd patch with it.
+  - name: The site
+    url: https://somebox.github.io/synthunits/
+    about: Every module with its renders, schematic, connections and progress.

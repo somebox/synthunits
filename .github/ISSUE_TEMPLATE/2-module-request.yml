@@ -1,0 +1,32 @@
+name: Module request
+description: A module you'd like to see as a synthunit.
+title: "Request: "
+labels: ["request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        What would you like to see? Analog circuits that a board house can assemble suit the series best; I'll say
+        honestly if one doesn't fit.
+  - type: input
+    id: what
+    attributes:
+      label: The module, in a few words
+      placeholder: "e.g. a dual slew limiter with rise and fall"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What would you use it for?
+      description: A patch, a gap in your case, a circuit you've seen and liked (a link helps).
+    validations:
+      required: true
+  - type: dropdown
+    id: form
+    attributes:
+      label: As a minimodule or a Eurorack module?
+      options:
+        - A minimodule (a small board on leads)
+        - A Eurorack module behind a panel
+        - Either

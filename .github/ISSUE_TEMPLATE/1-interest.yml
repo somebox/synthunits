@@ -1,0 +1,67 @@
+name: I'd use this
+description: Tick the modules you'd use, so I know what to build first.
+title: "Interest"
+labels: ["interest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Nothing is for sale yet. This helps me choose what goes into the first production round (20 to 50 units of
+        a selection of modules). Every module is on https://somebox.github.io/synthunits/.
+  - type: checkboxes
+    id: modules
+    attributes:
+      label: Which modules would you use?
+      options:
+        - label: "Minimodules: VCO: saw, square and triangle"
+        - label: "Minimodules: VCF: diode-ladder low-pass"
+        - label: "Minimodules: VCA: two linear channels"
+        - label: "Minimodules: ADSR envelope"
+        - label: "Minimodules: 4-input DC mixer"
+        - label: "Minimodules: Buffered multiple, two attenuated outputs"
+        - label: "Minimodules: LFO: triangle and square, rate and range"
+        - label: "Minimodules: Noise source and sample and hold"
+        - label: "Minimodules: Random CV: clock, noise, sample and hold, slew"
+        - label: "Minimodules: FX: stereo effects on a Pico 2 (reverb, delay, granular)"
+        - label: "Eurorack: VCO, 10 HP: saw, pulse, sub, triangle and sine"
+        - label: "Eurorack: Analog voice: a semi-modular voice on one 42 HP board"
+        - label: "Tools: Op-amp minimodule: two stages to build on"
+        - label: "Tools: Op-amp lab board: two stages to learn on"
+        - label: "Tools: OTA breakout: a dual OTA for the breadboard"
+        - label: "Tools: Quad op-amp breakout: four 36 V op-amps"
+        - label: "Tools: Matched NPN pair breakout"
+        - label: "Tools: 8-channel DAC breakout: 12-bit outputs over I2C"
+        - label: "Tools: 24-bit ADC breakout: four inputs over I2C"
+        - label: "Tools: Rig: 8 CV outputs"
+        - label: "Tools: Rig: 4 CV inputs"
+        - label: "Tools: Rig: gates and contacts"
+        - label: "Utilities: Power hub: one Eurorack ribbon to eight module leads"
+        - label: "Utilities: USB-C supply: ±12 V from a phone charger"
+        - label: "Utilities: Pot breakout: one 9 mm pot on a lead"
+        - label: "Utilities: Jack breakout: one Thonkiconn on a lead"
+        - label: "Utilities: Toggle breakout: one sub-mini toggle on a lead"
+        - label: "Utilities: Button breakout: one 12 mm push button on a lead"
+        - label: "Utilities: Universal panel: every hole, no names"
+  - type: dropdown
+    id: form
+    attributes:
+      label: Kit or built?
+      options:
+        - A kit to solder (the small parts already on the board)
+        - Built and tested
+        - Either
+    validations:
+      required: true
+  - type: dropdown
+    id: panel
+    attributes:
+      label: With a front panel, or on leads in a box?
+      options:
+        - Behind an 8 HP front panel, in a Eurorack case
+        - On leads, in a box or on the bench
+        - Either
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: What you'd patch with them, what's missing, what would make you buy one.
