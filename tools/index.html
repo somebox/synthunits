@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tools · synthunits</title>
+<meta name="description" content="Op-amp boards, IC breakouts and a test rig: things to learn on and to test with.">
+<meta property="og:title" content="Tools · synthunits">
+<meta property="og:description" content="Op-amp boards, IC breakouts and a test rig: things to learn on and to test with.">
+<link rel="icon" href="../assets/logo/knob.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/logo/synthunits-white.svg"><img src="../assets/logo/synthunits.svg" alt="synthunits 单元" height="22"></picture></a>
+  <nav><a href="../minimodules/">Minimodules</a><a href="../eurorack/">Eurorack</a><a href="../tools/" aria-current=page>Tools</a><a href="../utilities/">Utilities</a><a href="../ordering/">Ordering</a><a href="../about/">About</a></nav>
+</header>
+<main>
+<section class="head"><h1>Tools</h1><p>Boards that help build the rest: an op-amp board to try circuits on, small breakouts that put a chip on a breadboard,
+and a test rig of I2C boards that will drive and measure the modules on the bench.</p></section>
+<section class="cards"><a class="card" href="../tools/opamp/">
+  <div class="shot"><img src="../img/opamp/card.webp" alt="OP-AMP, a render" loading="lazy"></div>
+  <div class="text"><h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.0 28.0" width="22" height="22" class="icon" aria-hidden="true"><path d="M4.40,3.20 L25.40,14.00 L4.40,24.80 L4.40,3.20 M6.56,18.32 L11.12,18.32 M6.56,9.68 L11.12,9.68 M8.84,11.96 L8.84,7.40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>OP-AMP</h3><p>Two op-amp stages you finish yourself with resistors, capacitors and wires: a follower, an amplifier, a mixer, an offset or a filter.</p><span class="badge ordered">Being made</span></div>
+</a>
+<a class="card" href="../tools/opamp-lab/">
+  <div class="shot"><img src="../img/opamp-lab/card.webp" alt="OP-AMP LAB, a render" loading="lazy"></div>
+  <div class="text"><h3>OP-AMP LAB</h3><p>A 100 × 100 mm board for learning op-amps: two stages drawn as their schematic, with jacks, header pins and a small breadboard area.</p><span class="badge held">Drawn and checked; held back from the first order</span></div>
+</a>
+<a class="card" href="../tools/ota-breakout/">
+  <div class="shot"><img src="../img/ota-breakout/card.webp" alt="OTA, a render" loading="lazy"></div>
+  <div class="text"><h3>OTA</h3><p>A dual OTA on a 0.6 in wide header in its own pin order, to try OTA circuits on a breadboard.</p><span class="badge ordering">In the first test order, being placed</span></div>
+</a>
+<a class="card" href="../tools/quad-opamp-breakout/">
+  <div class="shot"><img src="../img/quad-opamp-breakout/card.webp" alt="QUAD OP-AMP, a render" loading="lazy"></div>
+  <div class="text"><h3>QUAD OP-AMP</h3><p>A quad op-amp with rail-to-rail output on a 0.6 in wide header, running straight from ±12 V.</p><span class="badge ready">Drawn and checked; not ordered yet</span></div>
+</a>
+<a class="card" href="../tools/npn-pair-breakout/">
+  <div class="shot"><img src="../img/npn-pair-breakout/card.webp" alt="NPN PAIR, a render" loading="lazy"></div>
+  <div class="text"><h3>NPN PAIR</h3><p>Two matched NPN transistors on one die, on a six-pin header for the breadboard: the pair an exponential converter needs.</p><span class="badge ordering">In the first test order, being placed</span></div>
+</a>
+<a class="card" href="../tools/dac-breakout/">
+  <div class="shot"><img src="../img/dac-breakout/card.webp" alt="DAC, a render" loading="lazy"></div>
+  <div class="text"><h3>DAC</h3><p>Eight 12-bit voltage outputs over I2C on a 0.6 in wide header, to try the DAC on a breadboard before building it into a board.</p><span class="badge ordering">In the first test order, being placed</span></div>
+</a>
+<a class="card" href="../tools/adc-breakout/">
+  <div class="shot"><img src="../img/adc-breakout/card.webp" alt="ADC, a render" loading="lazy"></div>
+  <div class="text"><h3>ADC</h3><p>A four-input 24-bit ADC with I2C, a programmable gain amplifier and an internal reference, on a 0.6 in wide header.</p><span class="badge ordering">In the first test order, being placed</span></div>
+</a>
+<a class="card" href="../tools/rig-cv-out/">
+  <div class="shot"><img src="../img/rig-cv-out/card.webp" alt="RIG DAC, a render" loading="lazy"></div>
+  <div class="text"><h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.0 28.0" width="22" height="22" class="icon" aria-hidden="true"><path d="M24.75,9.55 L18.45,3.25 L9.55,3.25 L3.25,9.55 L3.25,18.45 L9.55,24.75 L18.45,24.75 L24.75,18.45 L24.75,9.55 M7.28,19.04 L10.64,19.04 L10.64,15.68 L14.00,15.68 L14.00,12.32 L17.36,12.32 L17.36,8.96 L20.72,8.96" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>RIG DAC</h3><p>Eight calibrated, settled CV outputs from −5 to +10 V for the test rig, set over I2C from a Pico 2.</p><span class="badge held">Drawn and checked; held back from the first order</span></div>
+</a>
+<a class="card" href="../tools/rig-cv-in/">
+  <div class="shot"><img src="../img/rig-cv-in/card.webp" alt="RIG ADC, a render" loading="lazy"></div>
+  <div class="text"><h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.0 28.0" width="22" height="22" class="icon" aria-hidden="true"><path d="M24.75,9.55 L18.45,3.25 L9.55,3.25 L3.25,9.55 L3.25,18.45 L9.55,24.75 L18.45,24.75 L24.75,18.45 L24.75,9.55 M7.80,15.58 L8.21,14.67 L8.76,13.82 L9.44,13.07 L10.21,12.43 L11.08,11.92 L12.02,11.55 L13.00,11.32 L14.00,11.24 L15.00,11.32 L15.98,11.55 L16.92,11.92 L17.79,12.43 L18.56,13.07 L19.24,13.82 L19.79,14.67 L20.20,15.58 M14.00,17.84 L17.60,12.56" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>RIG ADC</h3><p>The test rig&#x27;s voltmeter: four 24-bit CV inputs at 1 MΩ, with ground sense and a 5.000 V reference to calibrate against.</p><span class="badge held">Drawn and checked; held back from the first order</span></div>
+</a>
+<a class="card" href="../tools/rig-gates/">
+  <div class="shot"><img src="../img/rig-gates/card.webp" alt="RIG GATE, a render" loading="lazy"></div>
+  <div class="text"><h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.0 28.0" width="22" height="22" class="icon" aria-hidden="true"><path d="M24.75,9.55 L18.45,3.25 L9.55,3.25 L3.25,9.55 L3.25,18.45 L9.55,24.75 L18.45,24.75 L24.75,18.45 L24.75,9.55 M6.56,17.84 L10.40,17.84 L10.40,10.16 L17.60,10.16 L17.60,17.84 L21.44,17.84" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>RIG GATE</h3><p>Four gate outputs, four gate inputs and four isolated contacts for the test rig, on an I2C port expander.</p><span class="badge held">Drawn and checked; held back from the first order</span></div>
+</a></section>
+<section class="notes"><p>The OTA, matched NPN pair, DAC and ADC breakouts come on one small panel, so they order as one design and travel as one sheet. The boards are held together by narrow tabs with rows of mouse bites, so each one snaps out clean of its neighbour; file the stubs flush. The quad op-amp breakout isn't on it and would be ordered on its own.</p></section>
+</main>
+<footer>
+  <p>synthunits is made by Jeremy Seitz in Luzern, Switzerland. The design isn't open source (yet); this site shows how it works.</p>
+  <p class="links"><a href="https://somebox.com">somebox.com</a> · <a rel="me" href="https://swiss.social/@somebox">Mastodon</a> · <a href="https://github.com/somebox/synthunits">GitHub</a> · <a href="https://github.com/somebox/synthunits/projects">progress</a> · <a href="https://github.com/somebox/synthunits/discussions">feedback</a></p>
+</footer>
+</body>
+</html>

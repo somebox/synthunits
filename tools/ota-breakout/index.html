@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OTA breakout: a dual OTA for the breadboard · synthunits</title>
+<meta name="description" content="A dual OTA on a 0.6 in wide header in its own pin order, to try OTA circuits on a breadboard.">
+<meta property="og:title" content="OTA breakout: a dual OTA for the breadboard · synthunits">
+<meta property="og:description" content="A dual OTA on a 0.6 in wide header in its own pin order, to try OTA circuits on a breadboard.">
+<link rel="icon" href="../../assets/logo/knob.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../"><picture><source media="(prefers-color-scheme: dark)" srcset="../../assets/logo/synthunits-white.svg"><img src="../../assets/logo/synthunits.svg" alt="synthunits 单元" height="22"></picture></a>
+  <nav><a href="../../minimodules/">Minimodules</a><a href="../../eurorack/">Eurorack</a><a href="../../tools/" aria-current=page>Tools</a><a href="../../utilities/">Utilities</a><a href="../../ordering/">Ordering</a><a href="../../about/">About</a></nav>
+</header>
+<main>
+<p class="crumb"><a href="../../tools/">Tools</a></p>
+<section class="head board"><h1>OTA breakout: a dual OTA for the breadboard</h1><p class="line">A dual OTA on a 0.6 in wide header in its own pin order, to try OTA circuits on a breadboard.</p></section>
+<section class="overview"><div class="summary"><p>A small breakout for a dual operational transconductance amplifier, the chip in my VCA and VCF. Each half is an OTA with its linearising diodes and a Darlington buffer; side A is on the left row of pins, side B on the right.</p>
+<p>The chip and its decoupling sit on a board 0.8 in wide. Its pins come out on two rows of 2.54 mm header 0.6 in apart, in the order a DIP package would have them, so the board straddles a breadboard's middle and the datasheet's pinout still holds. The chip has no ground pin, so each row ends in a GND pin for the decoupling capacitors' return. Every pin is named beside its pad.</p>
+<p>I'd rather have the interesting chips from my boards on breakouts I can reuse than as loose spares. These come bare: I solder the chip and two capacitors by hand. Not built yet.</p></div><dl class="facts"><dt>Status</dt><dd><span class="badge ordering">In the first test order, being placed</span></dd><dt>Version</dt><dd>v1.0 (2026-10-26)</dd><dt>First order</dt><dd>5 on a snap-apart panel with the other IC breakouts, bare</dd></dl></section>
+<section class="gallery"><figure><a href="../../img/ota-breakout/top.webp"><img src="../../img/ota-breakout/top.webp" alt="OTA, the front" loading="lazy"></a><figcaption>the front</figcaption></figure><figure><a href="../../img/ota-breakout/iso.webp"><img src="../../img/ota-breakout/iso.webp" alt="OTA, at an angle" loading="lazy"></a><figcaption>at an angle</figcaption></figure><figure><a href="../../img/ota-breakout/bottom.webp"><img src="../../img/ota-breakout/bottom.webp" alt="OTA, the back" loading="lazy"></a><figcaption>the back</figcaption></figure></section>
+<section><h2>What it does</h2><ul><li>One dual OTA, each half with linearising diodes and a Darlington output buffer.</li><li>2 × 9 pins on a 2.54 mm pitch, rows 15.24 mm (0.6 in) apart: the chip's 16 pins in DIP order, and a GND pin at the foot of each row.</li><li>Supply: ±12 V on V+ and V−, 36 V across them at most.</li><li>100 nF on each supply pin, beside the chip.</li><li>IABC takes the amplifier's bias current, 2 mA at most.</li><li>20.32 × 28.36 mm, 0.8 in wide.</li></ul></section>
+<section><h2>Pins</h2><div class="table"><table class="pins"><tbody><tr><td>IABC</td><td>IABC</td></tr><tr><td>DIODE</td><td>DIODE</td></tr><tr><td>IN+</td><td>IN+</td></tr><tr><td>IN-</td><td>IN-</td></tr><tr><td>OUT</td><td>OUT</td></tr><tr><td>V-</td><td>V+</td></tr><tr><td>BUFIN</td><td>BUFIN</td></tr><tr><td>BUFOUT</td><td>BUFOUT</td></tr><tr><td>GND</td><td>GND</td></tr></tbody></table></div></section>
+<section><h2>Wiring and setup</h2><ul><li>The header goes underneath, long pins down, soldered from the front.</li><li>Connect both GND pins to ground: they carry the decoupling capacitors' return.</li><li>Feed IABC through a resistor from a control voltage, or from a current source.</li><li>DIODE biases the linearising diodes; leave it open when they aren't used.</li><li>The buffer has no load of its own: give BUFOUT a resistor to V− (10k to 47k), or leave the buffer unused with BUFIN tied to V−.</li></ul></section>
+<section><h2>Limits and open questions</h2><ul><li>Not built yet.</li><li>A surface-mount chip on a bare board: soldered by hand, with hot air or an iron on the hand-solder pads.</li></ul></section>
+<section><h2>Development notes</h2><ul><li>It comes on the snap-apart panel with the other chip breakouts. The chips and capacitors are bought alongside and fitted by hand.</li></ul></section>
+<section><h2>Schematic</h2><p class="note">The schematic as drawn, with each chip named by its function rather than its part number. The design isn&#x27;t open source yet, so there are no files to download.</p><div class="sheets"><figure><a href="../../sch/ota-breakout/01-top.svg"><img src="../../sch/ota-breakout/01-top.webp" alt="OTA schematic, top" loading="lazy"></a><figcaption>top · <a href="../../sch/ota-breakout/01-top.svg">full size</a></figcaption></figure></div></section>
+<section class="follow"><p>Would you use a OTA? A thumbs-up on <a href="https://github.com/somebox/synthunits/issues">its tracking issue</a> is how I count interest, and you can subscribe
+there to follow its bring-up. Questions and ideas go to the <a href="https://github.com/somebox/synthunits/discussions">discussions</a>.</p></section>
+</main>
+<footer>
+  <p>synthunits is made by Jeremy Seitz in Luzern, Switzerland. The design isn't open source (yet); this site shows how it works.</p>
+  <p class="links"><a href="https://somebox.com">somebox.com</a> · <a rel="me" href="https://swiss.social/@somebox">Mastodon</a> · <a href="https://github.com/somebox/synthunits">GitHub</a> · <a href="https://github.com/somebox/synthunits/projects">progress</a> · <a href="https://github.com/somebox/synthunits/discussions">feedback</a></p>
+</footer>
+</body>
+</html>

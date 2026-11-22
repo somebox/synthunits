@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quad op-amp breakout: four 36 V op-amps · synthunits</title>
+<meta name="description" content="A quad op-amp with rail-to-rail output on a 0.6 in wide header, running straight from ±12 V.">
+<meta property="og:title" content="Quad op-amp breakout: four 36 V op-amps · synthunits">
+<meta property="og:description" content="A quad op-amp with rail-to-rail output on a 0.6 in wide header, running straight from ±12 V.">
+<link rel="icon" href="../../assets/logo/knob.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../"><picture><source media="(prefers-color-scheme: dark)" srcset="../../assets/logo/synthunits-white.svg"><img src="../../assets/logo/synthunits.svg" alt="synthunits 单元" height="22"></picture></a>
+  <nav><a href="../../minimodules/">Minimodules</a><a href="../../eurorack/">Eurorack</a><a href="../../tools/" aria-current=page>Tools</a><a href="../../utilities/">Utilities</a><a href="../../ordering/">Ordering</a><a href="../../about/">About</a></nav>
+</header>
+<main>
+<p class="crumb"><a href="../../tools/">Tools</a></p>
+<section class="head board"><h1>Quad op-amp breakout: four 36 V op-amps</h1><p class="line">A quad op-amp with rail-to-rail output on a 0.6 in wide header, running straight from ±12 V.</p></section>
+<section class="overview"><div class="summary"><p>A breakout for a quad op-amp that runs on up to 36 V and swings its output rail to rail, so it works straight from a Eurorack ±12 V supply and still reaches +10 V, where an older quad may stop short. It is the op-amp behind the test rig's CV outputs.</p>
+<p>As with the other chip breakouts, the chip and its decoupling sit on a board 0.8 in wide, the pins on two rows of 2.54 mm header 0.6 in apart in DIP order. It straddles a breadboard and the usual quad op-amp pinout holds: units A and B on the left, C and D on the right. A GND pin at the foot of each row returns the decoupling capacitors.</p>
+<p>It left the chip panel when the op-amp lab board took its place, so it waits to be ordered on its own. Not built.</p></div><dl class="facts"><dt>Status</dt><dd><span class="badge ready">Drawn and checked; not ordered yet</span></dd><dt>Version</dt><dd>v1.0 (2026-10-26)</dd><dt>Board</dt><dd>20.32 × 25.82 mm, 2 layers</dd></dl></section>
+<section class="gallery"><figure><a href="../../img/quad-opamp-breakout/top.webp"><img src="../../img/quad-opamp-breakout/top.webp" alt="QUAD OP-AMP, the front" loading="lazy"></a><figcaption>the front</figcaption></figure><figure><a href="../../img/quad-opamp-breakout/iso.webp"><img src="../../img/quad-opamp-breakout/iso.webp" alt="QUAD OP-AMP, at an angle" loading="lazy"></a><figcaption>at an angle</figcaption></figure><figure><a href="../../img/quad-opamp-breakout/bottom.webp"><img src="../../img/quad-opamp-breakout/bottom.webp" alt="QUAD OP-AMP, the back" loading="lazy"></a><figcaption>the back</figcaption></figure></section>
+<section><h2>What it does</h2><ul><li>One quad op-amp: 36 V supply, rail-to-rail output.</li><li>2 × 8 pins on a 2.54 mm pitch, rows 15.24 mm (0.6 in) apart: the chip's 14 pins in DIP order, and a GND pin at the foot of each row.</li><li>Supply: ±12 V, anywhere from 2.7 to 36 V across V+ and V−.</li><li>100 nF on each supply pin.</li><li>20.32 × 25.82 mm, 0.8 in wide.</li></ul></section>
+<section><h2>Pins</h2><div class="table"><table class="pins"><tbody><tr><td>OUTA</td><td>OUTD</td></tr><tr><td>-INA</td><td>-IND</td></tr><tr><td>+INA</td><td>+IND</td></tr><tr><td>V+</td><td>V-</td></tr><tr><td>+INB</td><td>+INC</td></tr><tr><td>-INB</td><td>-INC</td></tr><tr><td>OUTB</td><td>OUTC</td></tr><tr><td>GND</td><td>GND</td></tr></tbody></table></div></section>
+<section><h2>Wiring and setup</h2><ul><li>The header goes underneath, long pins down, soldered from the front.</li><li>Connect both GND pins to ground for the decoupling.</li><li>The standard quad op-amp pinout: units A and B down the left row, C and D up the right.</li><li>Tie an unused unit as a follower with its + input at GND (OUT to −IN).</li></ul></section>
+<section><h2>Limits and open questions</h2><ul><li>Not built yet.</li><li>Not on the chip panel: it would be ordered as a single board.</li></ul></section>
+<section><h2>Development notes</h2><ul><li>It was one of five chip breakouts, then gave up its place on the panel to the op-amp lab board.</li></ul></section>
+<section><h2>Schematic</h2><p class="note">The schematic as drawn, with each chip named by its function rather than its part number. The design isn&#x27;t open source yet, so there are no files to download.</p><div class="sheets"><figure><a href="../../sch/quad-opamp-breakout/01-top.svg"><img src="../../sch/quad-opamp-breakout/01-top.webp" alt="QUAD OP-AMP schematic, top" loading="lazy"></a><figcaption>top · <a href="../../sch/quad-opamp-breakout/01-top.svg">full size</a></figcaption></figure></div></section>
+<section class="follow"><p>Would you use a QUAD OP-AMP? A thumbs-up on <a href="https://github.com/somebox/synthunits/issues">its tracking issue</a> is how I count interest, and you can subscribe
+there to follow its bring-up. Questions and ideas go to the <a href="https://github.com/somebox/synthunits/discussions">discussions</a>.</p></section>
+</main>
+<footer>
+  <p>synthunits is made by Jeremy Seitz in Luzern, Switzerland. The design isn't open source (yet); this site shows how it works.</p>
+  <p class="links"><a href="https://somebox.com">somebox.com</a> · <a rel="me" href="https://swiss.social/@somebox">Mastodon</a> · <a href="https://github.com/somebox/synthunits">GitHub</a> · <a href="https://github.com/somebox/synthunits/projects">progress</a> · <a href="https://github.com/somebox/synthunits/discussions">feedback</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8-channel DAC breakout: 12-bit outputs over I2C · synthunits</title>
+<meta name="description" content="Eight 12-bit voltage outputs over I2C on a 0.6 in wide header, to try the DAC on a breadboard before building it into a board.">
+<meta property="og:title" content="8-channel DAC breakout: 12-bit outputs over I2C · synthunits">
+<meta property="og:description" content="Eight 12-bit voltage outputs over I2C on a 0.6 in wide header, to try the DAC on a breadboard before building it into a board.">
+<link rel="icon" href="../../assets/logo/knob.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../../"><picture><source media="(prefers-color-scheme: dark)" srcset="../../assets/logo/synthunits-white.svg"><img src="../../assets/logo/synthunits.svg" alt="synthunits 单元" height="22"></picture></a>
+  <nav><a href="../../minimodules/">Minimodules</a><a href="../../eurorack/">Eurorack</a><a href="../../tools/" aria-current=page>Tools</a><a href="../../utilities/">Utilities</a><a href="../../ordering/">Ordering</a><a href="../../about/">About</a></nav>
+</header>
+<main>
+<p class="crumb"><a href="../../tools/">Tools</a></p>
+<section class="head board"><h1>8-channel DAC breakout: 12-bit outputs over I2C</h1><p class="line">Eight 12-bit voltage outputs over I2C on a 0.6 in wide header, to try the DAC on a breadboard before building it into a board.</p></section>
+<section class="overview"><div class="summary"><p>A breakout for an eight-channel, 12-bit DAC with an I2C interface and an internal 2.5 V reference. It is the converter on the test rig's CV output board, and I wanted to try it on a breadboard first. That's why its breakout went into the first order while the rig boards wait.</p>
+<p>The chip and its decoupling sit on a board 0.8 in wide, its pins on two rows of 2.54 mm header 0.6 in apart in DIP order, each named beside its pad. It runs from 2.7 to 5.5 V and talks I2C at the same level, so it suits a Pico at 3.3 V or a 5 V microcontroller. Bare: I solder the chip and three capacitors by hand. Not built yet.</p></div><dl class="facts"><dt>Status</dt><dd><span class="badge ordering">In the first test order, being placed</span></dd><dt>Version</dt><dd>v1.0 (2026-10-26)</dd><dt>Board</dt><dd>20.32 × 25.82 mm, 2 layers</dd><dt>First order</dt><dd>5 on a snap-apart panel with the other IC breakouts, bare</dd></dl></section>
+<section class="gallery"><figure><a href="../../img/dac-breakout/top.webp"><img src="../../img/dac-breakout/top.webp" alt="DAC, the front" loading="lazy"></a><figcaption>the front</figcaption></figure><figure><a href="../../img/dac-breakout/iso.webp"><img src="../../img/dac-breakout/iso.webp" alt="DAC, at an angle" loading="lazy"></a><figcaption>at an angle</figcaption></figure><figure><a href="../../img/dac-breakout/bottom.webp"><img src="../../img/dac-breakout/bottom.webp" alt="DAC, the back" loading="lazy"></a><figcaption>the back</figcaption></figure></section>
+<section><h2>What it does</h2><ul><li>Eight 12-bit voltage outputs, OUTA to OUTH, set over I2C.</li><li>Supply: AVDD 2.7 to 5.5 V; I2C at the same logic level.</li><li>An internal 2.5 V reference, off at power-up. Switched on, the outputs span 0 to 5 V (with AVDD at 5 V for the full range).</li><li>Or an external reference on VREF: the outputs then span 0 to VREF.</li><li>100 nF and 1 µF on AVDD, 100 nF on VREF.</li><li>Three addresses: ADR0 to GND 0x48, to AVDD 0x4A, open 0x4C.</li><li>2 × 8 pins on a 2.54 mm pitch, rows 15.24 mm (0.6 in) apart.</li><li>20.32 × 25.82 mm, 0.8 in wide.</li></ul></section>
+<section><h2>Pins</h2><div class="table"><table class="pins"><tbody><tr><td>LDAC (active low)</td><td>SCL</td></tr><tr><td>ADR0</td><td>SDA</td></tr><tr><td>AVDD</td><td>GND</td></tr><tr><td>OUTA</td><td>OUTB</td></tr><tr><td>OUTC</td><td>OUTD</td></tr><tr><td>OUTE</td><td>OUTF</td></tr><tr><td>OUTG</td><td>OUTH</td></tr><tr><td>VREF</td><td>CLR (active low)</td></tr></tbody></table></div></section>
+<section><h2>Wiring and setup</h2><ul><li>The header goes underneath, long pins down, soldered from the front.</li><li>Tie LDAC to GND, so each write updates its channel at once.</li><li>Tie CLR to AVDD: a falling edge on it clears every channel to zero.</li><li>Pull-ups of 2.2k to 10k from SDA and SCL to AVDD, unless the bus already has them.</li><li>Turn the internal reference on with its I2C command, or feed VREF from an external reference.</li></ul></section>
+<section><h2>Limits and open questions</h2><ul><li>Not built yet.</li><li>A fine-pitch surface-mount chip: hot air is the easier way to solder it.</li><li>The outputs reach 5 V at most. Eurorack levels need an op-amp stage after it, as on the rig's CV output board.</li></ul></section>
+<section><h2>Development notes</h2><ul><li>It comes on the snap-apart chip panel, bare. Trying it here first tells me how the rig's CV output board will behave before I order that.</li></ul></section>
+<section><h2>Schematic</h2><p class="note">The schematic as drawn, with each chip named by its function rather than its part number. The design isn&#x27;t open source yet, so there are no files to download.</p><div class="sheets"><figure><a href="../../sch/dac-breakout/01-top.svg"><img src="../../sch/dac-breakout/01-top.webp" alt="DAC schematic, top" loading="lazy"></a><figcaption>top · <a href="../../sch/dac-breakout/01-top.svg">full size</a></figcaption></figure></div></section>
+<section class="follow"><p>Would you use a DAC? A thumbs-up on <a href="https://github.com/somebox/synthunits/issues">its tracking issue</a> is how I count interest, and you can subscribe
+there to follow its bring-up. Questions and ideas go to the <a href="https://github.com/somebox/synthunits/discussions">discussions</a>.</p></section>
+</main>
+<footer>
+  <p>synthunits is made by Jeremy Seitz in Luzern, Switzerland. The design isn't open source (yet); this site shows how it works.</p>
+  <p class="links"><a href="https://somebox.com">somebox.com</a> · <a rel="me" href="https://swiss.social/@somebox">Mastodon</a> · <a href="https://github.com/somebox/synthunits">GitHub</a> · <a href="https://github.com/somebox/synthunits/projects">progress</a> · <a href="https://github.com/somebox/synthunits/discussions">feedback</a></p>
+</footer>
+</body>
+</html>

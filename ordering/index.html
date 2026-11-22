@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ordering · synthunits</title>
+<meta name="description" content="Nothing is for sale yet: the first boards are a test run. How to follow along, and rough prices.">
+<meta property="og:title" content="Ordering · synthunits">
+<meta property="og:description" content="Nothing is for sale yet: the first boards are a test run. How to follow along, and rough prices.">
+<link rel="icon" href="../assets/logo/knob.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../"><picture><source media="(prefers-color-scheme: dark)" srcset="../assets/logo/synthunits-white.svg"><img src="../assets/logo/synthunits.svg" alt="synthunits 单元" height="22"></picture></a>
+  <nav><a href="../minimodules/">Minimodules</a><a href="../eurorack/">Eurorack</a><a href="../tools/">Tools</a><a href="../utilities/">Utilities</a><a href="../ordering/" aria-current=page>Ordering</a><a href="../about/">About</a></nav>
+</header>
+<main>
+<section class="head"><h1>Ordering</h1><p>Nothing is for sale yet. The first boards are a test run for me: I'll build them, measure them and fix what's wrong
+before anyone pays for one. If enough people want them, the plan is a first small production round of 20 to 50 units
+of a selection of modules.</p></section>
+<section class="follow"><p><strong>To hear when that happens:</strong> star <a href="https://github.com/somebox/synthunits">somebox/synthunits</a> on GitHub and follow <a href="https://github.com/somebox">somebox</a>; the
+<a href="https://github.com/somebox/synthunits/projects">progress board</a> shows where each module stands. I post updates on <a href="https://swiss.social/@somebox">Mastodon</a> too.</p></section>
+<section><h2>The first test order</h2><p>The first order is being made: 13 lines at JLCPCB. The fab assembles
+the small surface-mount parts on two of each module's five boards (all five mixers); I solder the connectors by hand
+and keep the bare boards for a later build. The panel parts (jacks, pots, knobs, toggles, LEDs) come from Thonk in the
+UK, the connectors and spare parts from LCSC.</p><div class="table"><table><thead><tr><th>Board</th><th>What</th><th>Boards</th></tr></thead><tbody><tr><td><a href="../minimodules/vco/">VCO</a></td><td>A discrete 1 V/oct oscillator with saw, square and triangle outputs, hard sync, FM and an octave switch.</td><td>5, 2 assembled</td></tr><tr><td><a href="../minimodules/env/">ENV</a></td><td>An ADSR envelope on a CMOS 555 timer, with loop, a manual gate button, trigger, end-of-cycle and inverted outputs.</td><td>5, 2 assembled</td></tr><tr><td><a href="../minimodules/vca/">VCA</a></td><td>Two linear VCAs on one dual OTA, each with CV amount and level, normalled so one CV can drive both.</td><td>5, 2 assembled</td></tr><tr><td><a href="../minimodules/vcf/">VCF</a></td><td>A four-pole diode-ladder low-pass with 1 V/oct cutoff and voltage-controlled resonance that keeps its bass.</td><td>5, 2 assembled</td></tr><tr><td><a href="../minimodules/mix/">MIX</a></td><td>A four-input DC mixer for audio and CV, with an inverted output and an LED soft limiter.</td><td>5, 5 assembled</td></tr><tr><td><a href="../utilities/power-dist/">PWR</a></td><td>Takes a Eurorack 10-pin ribbon and gives eight keyed 3-pin leads to the modules, with a resettable fuse and an LED on each rail.</td><td>5, 2 assembled</td></tr><tr><td><a href="../utilities/pot-breakout/">POT</a></td><td>A small board for one Alpha 9 mm pot with a JST PH connector on its back, so the pot is wired with a lead instead of bare wires.</td><td>20 bare</td></tr><tr><td><a href="../utilities/jack-breakout/">JACK</a></td><td>A small board for one Thonkiconn mono jack, with JST PH connectors on its back for the tip and, if needed, the normal contact.</td><td>20 bare</td></tr><tr><td><a href="../utilities/toggle-breakout/">SW</a></td><td>A small board for one Dailywell sub-mini toggle, on-on or on-off-on, with a 3-pin JST PH connector on its back.</td><td>10 bare</td></tr><tr><td><a href="../utilities/button-breakout/">BTN</a></td><td>A small board for one 12 mm tactile switch whose own round button comes through the panel, with a 2-pin JST PH connector on its back.</td><td>5 bare</td></tr><tr><td><a href="../utilities/universal-panel/">UNIVERSAL</a></td><td>An 8 HP Eurorack panel with a hole for every place on the minimodules&#x27; shared layout, to fit any of them.</td><td>10 bare</td></tr><tr><td><a href="../tools/">IC breakouts</a></td><td>Four of the IC breakouts on one snap-apart panel, bare: the OTA, the matched pair, the DAC and the ADC.</td><td>5 bare</td></tr><tr><td><a href="../tools/opamp/">OP-AMP</a></td><td>Two op-amp stages you finish yourself with resistors, capacitors and wires: a follower, an amplifier, a mixer, an offset or a filter.</td><td>10, 10 assembled</td></tr></tbody></table></div><p>The test rig's three boards and an aluminium panel trial were taken out to keep this first step small; they come
+later.</p></section>
+<section id="prices"><h2>Rough prices</h2><p>These are rough: what a module might cost, built and tested, in a first production round of 20 to 50. Each covers the
+board and its assembly, the parts I fit by hand (connectors, jacks, pots, knobs, switches, LEDs), a front panel where
+the module has one, and the work around it: packing, the boards that fail, my time and the fees. Shipping and VAT are
+not included. The lower figure is for a run of 50, the higher for a run of 20.</p><div class="table"><table class="prices"><thead><tr><th>Module</th><th>What</th><th class=num>Rough price</th></tr></thead><tbody><tr><td><a href="../minimodules/vco/">VCO</a></td><td>A discrete 1 V/oct oscillator with saw, square and triangle outputs, hard sync, FM and an octave switch.</td><td class=num><b>$40–45</b></td></tr><tr><td><a href="../minimodules/vcf/">VCF</a></td><td>A four-pole diode-ladder low-pass with 1 V/oct cutoff and voltage-controlled resonance that keeps its bass.</td><td class=num><b>$30–40</b></td></tr><tr><td><a href="../minimodules/vca/">VCA</a></td><td>Two linear VCAs on one dual OTA, each with CV amount and level, normalled so one CV can drive both.</td><td class=num><b>$35–40</b></td></tr><tr><td><a href="../minimodules/env/">ENV</a></td><td>An ADSR envelope on a CMOS 555 timer, with loop, a manual gate button, trigger, end-of-cycle and inverted outputs.</td><td class=num><b>$35–40</b></td></tr><tr><td><a href="../minimodules/mix/">MIX</a></td><td>A four-input DC mixer for audio and CV, with an inverted output and an LED soft limiter.</td><td class=num><b>$30–35</b></td></tr><tr><td><a href="../tools/opamp/">OP-AMP</a></td><td>Two op-amp stages you finish yourself with resistors, capacitors and wires: a follower, an amplifier, a mixer, an offset or a filter.</td><td class=num><b>$10–15</b></td></tr><tr><td><a href="../utilities/power-dist/">PWR</a></td><td>Takes a Eurorack 10-pin ribbon and gives eight keyed 3-pin leads to the modules, with a resettable fuse and an LED on each rail.</td><td class=num><b>$5–10</b></td></tr></tbody></table></div><p>Once the boards are built and measured and a real run is quoted, these will change. The bare breakouts and the IC
+breakouts are left out: they are a few dollars each.</p></section>
+<section><h2>Planned, not released</h2><ul><li><strong>More minimodules:</strong> an LFO, a buffered multiple, noise with sample and hold, and a random CV generator. Their parts are placed; they get routed once the first boards prove the circuits.</li><li><strong>The FX module:</strong> stereo effects (reverb, delay, granular) on a Raspberry Pi Pico 2 in a socket, with four CV inputs, clock and freeze. The schematic and a placement trial are done; the firmware is still to write.</li><li><strong>Eurorack modules:</strong> the full VCO in 10 HP and a whole analog voice in 42 HP, from the same blocks.</li><li><strong>Synth-chip breakouts:</strong> small boards for three dedicated synth chips (a VCO chip, a multimode filter chip and a low-pass filter chip), to try them on a breadboard next to the discrete circuits.</li><li><strong>The test rig:</strong> three I2C boards that drive and measure a module from a Pico 2, held back until the first modules work.</li><li><strong>A USB-C supply:</strong> ±12 V from a USB-C charger for small setups. Placed, not routed.</li><li><strong>The digital bridge:</strong> MIDI in and DAC-to-CV blocks, so a keyboard or a computer can play the modules.</li></ul></section>
+<section><h2>Milestones</h2><ol>
+<li><strong>Bring-up.</strong> Each board of the first order built, powered and measured against its design, one at a time. Each
+   has a tracking issue and its page shows where it stands.</li>
+<li><strong>Fixes.</strong> What bring-up finds goes into the next revision of a board, ordered again where it needs to be.</li>
+<li><strong>The first production round.</strong> 20 to 50 units of a selection of modules, chosen by what works and what people ask
+   for. When that round can be ordered, this first release is done.</li>
+</ol></section>
+</main>
+<footer>
+  <p>synthunits is made by Jeremy Seitz in Luzern, Switzerland. The design isn't open source (yet); this site shows how it works.</p>
+  <p class="links"><a href="https://somebox.com">somebox.com</a> · <a rel="me" href="https://swiss.social/@somebox">Mastodon</a> · <a href="https://github.com/somebox/synthunits">GitHub</a> · <a href="https://github.com/somebox/synthunits/projects">progress</a> · <a href="https://github.com/somebox/synthunits/discussions">feedback</a></p>
+</footer>
+</body>
+</html>
